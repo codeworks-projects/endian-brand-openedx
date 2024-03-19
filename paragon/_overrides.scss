@@ -1,6 +1,85 @@
 // Use this file to define style overrides for @edx/paragon
 // This file is included after all Paragon styles, but should generally avoid using private mixins in Paragon.
+@import "_variables.scss";
+
+#root header {
+  background-color: $dark;
+  color: white;
+}
+
+#root footer {
+  background-color: $dark;
+  color: #888;
+}
 
 .btn-brand {
-  background-color: #76b100 !important;
+  background-color: $primary;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+}
+
+.pgn__pageBanner__accentA {
+  background-color: $dark;
+  color: white;
+}
+
+.pgn__pageBanner-dismissButtonContainer > .btn-icon.btn-icon-black {
+  color: white;
+}
+
+.learner-variant-header a {
+  .btn-inverse-primary {
+    background-color: transparent;
+    border-radius: 0;
+    color: white;
+
+    &:hover {
+      background-color: transparent;
+      color: $white-hover;
+    }
+  }
+}
+
+[dir="ltr"] .btn.pgn__avatar-button-avatar {
+  background: transparent;
+  color: white;
+  border: 0;
+
+  &:active {
+    background: transparent;
+    color: white;
+  }
+
+  &:focus {
+    background-color: $dark-hover;
+  }
+}
+
+.btn-dark.focus:before,
+.btn-dark:focus:before,
+.btn-light.focus:before,
+.btn-light:focus:before {
+  border: 0;
+}
+
+[dir="ltr"] .dropdown-menu[x-placement^="bottom"],
+[dir="ltr"] .dropdown-menu[x-placement^="left"],
+[dir="ltr"] .dropdown-menu[x-placement^="right"],
+[dir="ltr"] .dropdown-menu[x-placement^="top"] {
+  background-color: $dark;
+}
+
+.pgn__dropdown-item {
+  color: white;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: $dark-hover;
+}
+
+.dropdown-divider {
+  border-top: 1px solid #888;
 }
