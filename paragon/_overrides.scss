@@ -83,3 +83,15 @@
 .dropdown-divider {
   border-top: 1px solid #888;
 }
+
+// LOGIN
+
+.large-screen-svg-primary {
+  fill: $dark !important;
+}
+
+.layout {
+  & .bg-primary-400 {
+    background-color: $dark !important;
+  }
+}
