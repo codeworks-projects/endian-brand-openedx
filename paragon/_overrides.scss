@@ -30,16 +30,56 @@
 }
 
 .learner-variant-header a {
-  .btn-inverse-primary {
-    background-color: transparent;
-    border-radius: 0;
-    color: white;
+  background-color: transparent;
+  border-radius: 0;
+  color: white;
+  border-top: none !important;
+  border-radius: 0 !important;
 
-    &:hover {
-      background-color: transparent;
-      color: $white-hover;
+  &:hover {
+    background-color: transparent !important;
+    color: $white-hover !important;
+  }
+}
+
+header {
+  & .btn-icon.btn-icon-inverse-primary-active,
+  .btn-icon.btn-icon-inverse-primary-active.active,
+  .btn-icon.btn-icon-inverse-primary-active.hover,
+  .btn-icon.btn-icon-inverse-primary-active:active,
+  .btn-icon.btn-icon-inverse-primary-active:hover {
+    background: transparent;
+    color: white;
+  }
+
+  & .btn-icon.btn-icon-inverse-primary-active.focus,
+  .btn-icon.btn-icon-inverse-primary-active:focus {
+    background: transparent;
+    color: white;
+  }
+}
+
+.nav-small-menu {
+  & .btn-inverse-primary {
+    background-color: $dark;
+    color: white;
+    border-top: 1px solid #888 !important;
+
+    &:hover,
+    &:active {
+      background-color: $dark-hover;
+      color: white;
     }
   }
+
+  & .btn-inverse-primary.focus:before,
+  .btn-inverse-primary:focus:before {
+    border: none;
+  }
+}
+
+.learner-variant-header .course-link {
+  border-bottom-color: $primary !important;
 }
 
 [dir="ltr"] .btn.pgn__avatar-button-avatar {
@@ -82,6 +122,27 @@
 
 .dropdown-divider {
   border-top: 1px solid #888;
+}
+
+.donut-hole.complete-stroke,
+.donut-ring.complete-stroke,
+.donut-segment.complete-stroke {
+  stroke: $primary;
+}
+
+[data-testid="currentGradeTooltipContent"] {
+  background: white !important;
+  color: black !important;
+}
+
+.learning-header .user-dropdown .btn {
+  border: none !important;
+  color: white;
+
+  &:hover {
+    background: transparent;
+    opacity: 0.8;
+  }
 }
 
 // LOGIN
