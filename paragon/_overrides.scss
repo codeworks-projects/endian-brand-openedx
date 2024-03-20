@@ -9,7 +9,7 @@
 
 #root footer {
   background-color: $dark;
-  color: #888;
+  color: $secondary;
 }
 
 .btn-brand {
@@ -57,13 +57,27 @@ header {
     background: transparent;
     color: white;
   }
+
+  & .site-header-desktop .main-nav .nav-link {
+    background: transparent;
+    color: white;
+
+    &:hover {
+      color: $white-hover;
+    }
+  }
+
+  .btn-outline-primary:not(:disabled):not(.disabled).active,
+  .btn-outline-primary:not(:disabled):not(.disabled):active,
+  .show > .btn-outline-primary.dropdown-toggle {
+  }
 }
 
 .nav-small-menu {
   & .btn-inverse-primary {
     background-color: $dark;
     color: white;
-    border-top: 1px solid #888 !important;
+    border-top: 1px solid $secondary !important;
 
     &:hover,
     &:active {
@@ -107,21 +121,25 @@ header {
 [dir="ltr"] .dropdown-menu[x-placement^="bottom"],
 [dir="ltr"] .dropdown-menu[x-placement^="left"],
 [dir="ltr"] .dropdown-menu[x-placement^="right"],
-[dir="ltr"] .dropdown-menu[x-placement^="top"] {
+[dir="ltr"] .dropdown-menu[x-placement^="top"],
+[dir="ltr"] .menu-content.pin-right,
+[dir="rtl"] .menu-content.pin-left {
   background-color: $dark;
 }
 
-.pgn__dropdown-item {
+.pgn__dropdown-item,
+.dropdown-item {
   color: white;
 }
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-  color: $dark-hover;
+  color: $secondary;
+  background: transparent;
 }
 
 .dropdown-divider {
-  border-top: 1px solid #888;
+  border-top: 1px solid $secondary;
 }
 
 .donut-hole.complete-stroke,
@@ -143,13 +161,24 @@ header {
   }
 }
 
-.learning-header .user-dropdown .btn {
+.learning-header .user-dropdown .btn,
+.menu-trigger {
   border: none !important;
   color: white;
 
   &:hover {
     background: transparent;
     opacity: 0.8;
+  }
+
+  &:active {
+    background: transparent;
+  }
+
+  &:focus {
+    &::before {
+      border: none;
+    }
   }
 }
 
