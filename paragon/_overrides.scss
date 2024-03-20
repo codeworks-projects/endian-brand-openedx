@@ -177,8 +177,8 @@ header {
 .site-header-desktop .main-nav .nav-link.active,
 .site-header-desktop .main-nav .nav-link:focus,
 .site-header-desktop .main-nav .nav-link:hover {
-  background: transparent;
-  color: $white-hover;
+  background: transparent !important;
+  color: $white-hover !important;
 }
 
 .learning-header .user-dropdown .btn,
@@ -187,18 +187,18 @@ header {
   color: white;
 
   &:hover {
-    background: transparent;
+    background: transparent !important;
     opacity: 0.8;
-    color: $white-hover;
+    color: $white-hover !important;
   }
 
   &:active {
-    background: transparent;
+    background: transparent !important;
   }
 
   &:focus {
     &::before {
-      border: none;
+      border: none !important;
     }
   }
 
