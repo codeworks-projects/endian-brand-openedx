@@ -36,6 +36,10 @@
   border-top: none !important;
   border-radius: 0 !important;
 
+  &:nth-child(3) {
+    display: none;
+  }
+
   &:hover {
     background-color: transparent !important;
     color: $white-hover !important;
@@ -203,6 +207,10 @@ header {
   .show > .btn-outline-primary.dropdown-toggle {
     background: transparent;
   }
+}
+
+.pgn__card .pgn__card-wrapper-image-cap.horizontal .pgn__card-image-cap {
+  object-fit: contain;
 }
 
 // LOGIN
