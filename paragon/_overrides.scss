@@ -133,6 +133,14 @@ header {
 [data-testid="currentGradeTooltipContent"] {
   background: white !important;
   color: black !important;
+  border-radius: 1rem;
+}
+#non-passing-grade-tooltip {
+  background: white;
+
+  & .arrow:after {
+    border-top-color: white;
+  }
 }
 
 .learning-header .user-dropdown .btn {
