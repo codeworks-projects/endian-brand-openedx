@@ -67,9 +67,12 @@ header {
     }
   }
 
-  .btn-outline-primary:not(:disabled):not(.disabled).active,
-  .btn-outline-primary:not(:disabled):not(.disabled):active,
-  .show > .btn-outline-primary.dropdown-toggle {
+  & a.text-gray-700 {
+    color: white !important;
+
+    &:hover {
+      color: $white-hover !important;
+    }
   }
 }
 
@@ -153,12 +156,25 @@ header {
   color: black !important;
   border-radius: 1rem;
 }
+
 #non-passing-grade-tooltip {
   background: white;
 
   & .arrow:after {
     border-top-color: white;
   }
+}
+
+.nav-link {
+  color: white;
+}
+
+.site-header-desktop .main-nav .expanded .nav-link,
+.site-header-desktop .main-nav .nav-link.active,
+.site-header-desktop .main-nav .nav-link:focus,
+.site-header-desktop .main-nav .nav-link:hover {
+  background: transparent;
+  color: $white-hover;
 }
 
 .learning-header .user-dropdown .btn,
@@ -169,6 +185,7 @@ header {
   &:hover {
     background: transparent;
     opacity: 0.8;
+    color: $white-hover;
   }
 
   &:active {
@@ -179,6 +196,12 @@ header {
     &::before {
       border: none;
     }
+  }
+
+  & .btn-outline-primary:not(:disabled):not(.disabled).active,
+  .btn-outline-primary:not(:disabled):not(.disabled):active,
+  .show > .btn-outline-primary.dropdown-toggle {
+    background: transparent;
   }
 }
 
